@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Pixel Adventure 1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|d:\\pixel adventure 1\\assets\\_data\\_scripts\\ui\\button\\btngame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\ui\\button\\btngame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|d:\\pixel adventure 1\\assets\\_data\\_scripts\\player\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\player\\health\\playerhealth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|d:\\pixel adventure 1\\assets\\_data\\_scripts\\player\\health\\healthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\player\\health\\healthbar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|d:\\pixel adventure 1\\assets\\_data\\_scripts\\save\\resetdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\save\\resetdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|D:\\Pixel Adventure 1\\assets\\_data\\_scripts\\save\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\save\\savegame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|D:\\Pixel Adventure 1\\assets\\_data\\_scripts\\save\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\save\\savedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BtnGame.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\UI\\Button\\BtnGame.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\UI\\Button\\BtnGame.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\UI\\Button\\BtnGame.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\UI\\Button\\BtnGame.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwBsAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T08:14:46.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PlayerHealth.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Player\\Health\\PlayerHealth.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Player\\Health\\PlayerHealth.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Player\\Health\\PlayerHealth.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\Player\\Health\\PlayerHealth.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwB8AAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T08:06:12.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HealthBar.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Player\\Health\\HealthBar.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Player\\Health\\HealthBar.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Player\\Health\\HealthBar.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\Player\\Health\\HealthBar.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAzAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T08:00:14.761Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ResetData.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\ResetData.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Save\\ResetData.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\ResetData.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\Save\\ResetData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB0AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T07:02:28.154Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SaveData.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\SaveData.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Save\\SaveData.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\SaveData.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\Save\\SaveData.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T07:02:00.956Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SaveGame.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\SaveGame.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Save\\SaveGame.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\SaveGame.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\Save\\SaveGame.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABIAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-24T15:24:27.281Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
