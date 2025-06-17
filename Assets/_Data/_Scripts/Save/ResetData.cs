@@ -14,6 +14,8 @@ namespace Assets._Data._Scripts.Save
         private void ResetGameData()
         {
             int sceneCount = SceneManager.sceneCountInBuildSettings;
+            PlayerPrefs.SetInt("characterSelect", 0);
+            PlayerPrefs.Save();
             List<SaveData> saveData = new();
             for (int j = 0; j < sceneCount; j++)
             {

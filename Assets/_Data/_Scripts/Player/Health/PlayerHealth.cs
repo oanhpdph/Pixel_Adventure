@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class PlayerHealth : Health
 {
-    [SerializeField] private GameObject _panelGameOver;
-
     public Vector2 respawnPos;
     public Rigidbody2D playerRigidBody;
     public float CurrentHealth { get; private set; }
@@ -49,11 +47,9 @@ public class PlayerHealth : Health
     {
         isDie = true;
         AudioManager.Instance.PlaySFX(AudioAssets.instance.DieSound());
+        GameManager.Instance.stackGameState.Push(GameState.GameOver);
 
-        if (_panelGameOver != null)
-        {
-            _panelGameOver.SetActive(true);
-        }
+        GameManager.Instance.CurrentState = GameState.GameOver;
         Time.timeScale = 0;
     }
     public IEnumerator Respawn()

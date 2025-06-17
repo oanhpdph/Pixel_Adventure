@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 4986853579884966258}
   - component: {fileID: 5195904123128736645}
   - component: {fileID: 4153215729818628052}
+  - component: {fileID: 768995897669122367}
   m_Layer: 5
   m_Name: BtnSetting
   m_TagString: Untagged
@@ -172,7 +173,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.99997294, y: -76.79997}
+  m_AnchoredPosition: {x: -0.99997294, y: -51.79991}
   m_SizeDelta: {x: 223.95, y: 61.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4986853579884966258
@@ -203,7 +204,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300036, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -257,8 +258,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 768995897669122367}
+        m_TargetAssemblyTypeName: BtnSetting, Assembly-CSharp
         m_MethodName: Setting
         m_Mode: 1
         m_Arguments:
@@ -269,6 +270,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &768995897669122367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2151049468116956826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2aac93522becc84db85ddc8046e27dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4576701033879335670
 GameObject:
   m_ObjectHideFlags: 0
@@ -319,6 +332,7 @@ GameObject:
   - component: {fileID: 5800642410385045787}
   - component: {fileID: 8218182545192336586}
   - component: {fileID: 8754382110059804208}
+  - component: {fileID: 8664924417362253025}
   m_Layer: 5
   m_Name: BtnQuit
   m_TagString: Untagged
@@ -343,7 +357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.99997294, y: -204.70007}
+  m_AnchoredPosition: {x: -0.99997294, y: -179.70001}
   m_SizeDelta: {x: 223.95, y: 61.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5800642410385045787
@@ -374,7 +388,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300036, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -428,8 +442,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 8664924417362253025}
+        m_TargetAssemblyTypeName: BtnQuit, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -440,6 +454,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8664924417362253025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5522599236384959155}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cba2837c0f743b0378c360ef9233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5672412541480973252
 GameObject:
   m_ObjectHideFlags: 0
@@ -452,6 +478,7 @@ GameObject:
   - component: {fileID: 750975107355345659}
   - component: {fileID: 5147971255762660244}
   - component: {fileID: 2911250838911687835}
+  - component: {fileID: 6435325099633978108}
   m_Layer: 5
   m_Name: BtnResume
   m_TagString: Untagged
@@ -476,7 +503,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.0000002, y: 47.999954}
+  m_AnchoredPosition: {x: -1.0000002, y: 73}
   m_SizeDelta: {x: 223.95, y: 61.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &750975107355345659
@@ -507,7 +534,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300022, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
+  m_Sprite: {fileID: 21300036, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -561,8 +588,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 6435325099633978108}
+        m_TargetAssemblyTypeName: BtnResume, Assembly-CSharp
         m_MethodName: Resume
         m_Mode: 1
         m_Arguments:
@@ -573,6 +600,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6435325099633978108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5672412541480973252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809913ce4c9f0cf4aa1675be5536f95c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5845219428446731099
 GameObject:
   m_ObjectHideFlags: 0
@@ -607,7 +646,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 30}
+  m_AnchoredPosition: {x: 0, y: 39}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1354701136119492896
@@ -744,8 +783,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -22}
-  m_SizeDelta: {x: 602, y: 168.2}
+  m_AnchoredPosition: {x: 0, y: -13.9448}
+  m_SizeDelta: {x: 980, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7903490263784828862
 CanvasRenderer:
@@ -776,7 +815,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_Sprite: {fileID: 21300102, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
-  m_Type: 1
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -797,7 +836,7 @@ GameObject:
   - component: {fileID: 3617376421534997709}
   - component: {fileID: 2415996300454670528}
   m_Layer: 5
-  m_Name: TxtRestart
+  m_Name: TxtResume
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -930,6 +969,8 @@ GameObject:
   - component: {fileID: 3873577375541511798}
   - component: {fileID: 8863272251430998565}
   - component: {fileID: 1609500861912120267}
+  - component: {fileID: 503195523887287600}
+  - component: {fileID: 2454781629674620383}
   m_Layer: 5
   m_Name: PanelGamePause
   m_TagString: Untagged
@@ -956,7 +997,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 684.4302, y: 549.0721}
+  m_SizeDelta: {x: 850, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8863272251430998565
 CanvasRenderer:
@@ -979,14 +1020,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300054, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -995,7 +1036,32 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
+--- !u!114 &503195523887287600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597756200639929358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8540f99dda56d504f8b7434414f846ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelManager: {fileID: 0}
+--- !u!114 &2454781629674620383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7597756200639929358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6bab187c289c545a4a3eeaf7dd1600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7995577152520255862
 GameObject:
   m_ObjectHideFlags: 0

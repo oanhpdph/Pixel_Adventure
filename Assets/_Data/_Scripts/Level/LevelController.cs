@@ -13,14 +13,15 @@ public class LevelController : MonoBehaviour
     public int currentLevel;
     public List<SaveData> saveData;
 
-
     private void Awake()
     {
         if (instance == null)
         {
             instance = this;
+            DontDestroyOnLoad(gameObject);
         }
-        DontDestroyOnLoad(gameObject);
+        SaveGame saveGame = new();
+        gameData.saveData = saveGame.Load() == null ? gameData.saveData : gameData.saveData = saveGame.Load();
         saveData = gameData.saveData;
     }
 
@@ -31,7 +32,7 @@ public class LevelController : MonoBehaviour
         SceneManager.LoadScene(levelSelect);
     }
 
-    public void UpdateSaveDataScriptableObject(SaveData saveData)
+    public void UpdateSaveDataSO(SaveData saveData)
     {
         foreach (SaveData item in gameData.saveData)
         {
@@ -41,6 +42,7 @@ public class LevelController : MonoBehaviour
                 item.unlock = saveData.unlock;
             }
         }
+        SaveUpdate();
     }
     public void SaveUpdate()
     {
@@ -50,6 +52,10 @@ public class LevelController : MonoBehaviour
 
     public SaveData GetOneLevel(int level)
     {
+        if (level > gameData.saveData.Count)
+        {
+            return null;
+        }
         foreach (SaveData item in gameData.saveData)
         {
             if (item.level == level)
@@ -57,6 +63,6 @@ public class LevelController : MonoBehaviour
                 return item;
             }
         }
-        return null;
+        return default;
     }
 }

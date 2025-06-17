@@ -3,23 +3,16 @@ using UnityEngine;
 
 public class CameraManager : MonoBehaviour
 {
-    private static CameraManager instance { get; set; }
-    public static CameraManager Instance => instance;
-    public Collider2D lastCollider;
+    public GameObject player;
+    private CinemachineVirtualCamera cinemachine;
     private void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-        }
-    }
-    public void ChangeBoundingShape(Collider2D collider2D)
-    {
-        if (lastCollider == null || lastCollider != collider2D)
-        {
-            lastCollider = collider2D;
-        }
+        cinemachine = GetComponent<CinemachineVirtualCamera>();
 
-        GetComponent<CinemachineConfiner2D>().m_BoundingShape2D = collider2D;
     }
+    private void Start()
+    {
+        cinemachine.Follow = player.transform.GetChild(0);
+    }
+
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 467680687946540669}
   - component: {fileID: 3906531304025069454}
   - component: {fileID: 1334451765065174572}
+  - component: {fileID: 6907392682670725413}
   m_Layer: 5
   m_Name: BtnPause
   m_TagString: Untagged
@@ -121,8 +122,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 6907392682670725413}
+        m_TargetAssemblyTypeName: BtnPause, Assembly-CSharp
         m_MethodName: PauseGame
         m_Mode: 1
         m_Arguments:
@@ -133,6 +134,19 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6907392682670725413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5474737698968885433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2464832838475d488291c4abb41c6f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelManager: {fileID: 0}
 --- !u!1 &7088904526801126718
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,7 +206,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:

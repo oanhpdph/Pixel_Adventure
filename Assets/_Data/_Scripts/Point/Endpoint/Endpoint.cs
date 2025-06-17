@@ -13,7 +13,7 @@ public class Endpoint : MonoBehaviour
     [SerializeField] private float timeDelay = 0.5f;
     [SerializeField] private LevelStar levelStar;
     [SerializeField] private GameObject slotStatitic;
-    [SerializeField] private GameObject panelGameFinish;
+    //[SerializeField] private GameObject panelGameFinish;
 
 
     private Inventory inventory;
@@ -52,16 +52,16 @@ public class Endpoint : MonoBehaviour
     private IEnumerator FinishGame()
     {
         PlayerController.Instance.GetComponent<Rigidbody2D>().simulated = false;
+
         AudioManager.Instance.PlaySFX(AudioAssets.instance.FinishSound());
 
         this.GetComponent<Animator>().SetBool("Pressed", true);// play animator cup
         transform.Find("Animation").GetComponent<ParticleSystem>().Play();// play effect
 
         yield return new WaitForSecondsRealtime(timeDelay);
-
-        panelGameFinish.SetActive(true);
+        GameManager.Instance.CurrentState = GameState.GameFinish;
         levelStar.Star(calculatorStar);
-        Statitics();
+        StartCoroutine(Statitics());
         if (levelController != null)
         {
             UpdateLevel();
@@ -79,13 +79,15 @@ public class Endpoint : MonoBehaviour
             }
         }
     }
-    public void Statitics()
+    public IEnumerator Statitics()
     {
+        yield return null;
         GameObject statiticBar = GameObject.Find("StatiticBar");
         int i = 0;
         foreach (var item in inventory.GetInventory())
         {
             Vector3 position = new(i * 230, 0, 0);
+            Debug.Log(GameObject.Find("StatiticBar"));
             GameObject CloneSlot = Instantiate(slotStatitic, position, Quaternion.identity, statiticBar.transform);
             CloneSlot.transform.localPosition = position;
 
@@ -99,12 +101,19 @@ public class Endpoint : MonoBehaviour
     private void UnlockNextLevel()
     {
         SaveData nextLevel = levelController.GetOneLevel(levelController.currentLevel + 1);
-        if (nextLevel.unlock)
+        if (nextLevel != null)
         {
-            return;
+            if (nextLevel.unlock)
+            {
+                return;
+            }
+            nextLevel.unlock = true;
+            levelController.UpdateSaveDataSO(nextLevel);
         }
-        nextLevel.unlock = true;
-        levelController.UpdateSaveDataScriptableObject(nextLevel);
+        else
+        {
+            Debug.Log("max level");
+        }
     }
 
     private void UpdateLevel()
@@ -113,7 +122,7 @@ public class Endpoint : MonoBehaviour
         if (currentLevel.star < calculatorStar)
         {
             currentLevel.star = calculatorStar;
-            levelController.UpdateSaveDataScriptableObject(currentLevel);
+            levelController.UpdateSaveDataSO(currentLevel);
         }
     }
 }

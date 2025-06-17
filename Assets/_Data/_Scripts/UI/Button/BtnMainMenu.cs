@@ -1,24 +1,20 @@
-using Assets._Data._Scripts.Save;
 using UnityEngine;
 
 public class BtnMainMenu : MonoBehaviour
 {
-    public GameData _gameData;
-    public GameObject _panelSetting;
+    public GameObject panelSetting;
     private void Start()
     {
-        _panelSetting = GameObject.Find("PanelGameSetting");
+        panelSetting = GameObject.Find("PanelGameSetting");
 
-        if (_panelSetting != null)
+        if (panelSetting != null)
         {
-            _panelSetting.SetActive(false);
+            panelSetting.SetActive(false);
         }
     }
     public void LoadMenuArea()
     {
-        SaveGame saveGame = new();
-        _gameData.saveData = saveGame.Load();
-        SceneController.Instance.LoadScene("Menu Area");
+        SceneController.Instance.LoadScene(SceneFlags.LEVEL_SCREEN);
     }
 
     public void Exit()
@@ -28,15 +24,12 @@ public class BtnMainMenu : MonoBehaviour
 
     public void Setting()
     {
-        _panelSetting.SetActive(true);
+        panelSetting.SetActive(true);
     }
     public void CloseSetting()
     {
-        _panelSetting.SetActive(false);
+        panelSetting.SetActive(false);
     }
 
-    public void Charater()
-    {
 
-    }
 }

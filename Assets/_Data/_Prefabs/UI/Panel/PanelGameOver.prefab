@@ -35,8 +35,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 834.82, y: 170.78003}
+  m_AnchoredPosition: {x: 0, y: -12}
+  m_SizeDelta: {x: 980, y: 190}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2547328698158283199
 CanvasRenderer:
@@ -88,6 +88,7 @@ GameObject:
   - component: {fileID: 4781510207295190228}
   - component: {fileID: 2492741096937712991}
   - component: {fileID: 1661626356019888956}
+  - component: {fileID: 8230798393716812394}
   m_Layer: 5
   m_Name: BtnRestart
   m_TagString: Untagged
@@ -152,7 +153,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!114 &1661626356019888956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -197,8 +198,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 8230798393716812394}
+        m_TargetAssemblyTypeName: BtnRestartGame, Assembly-CSharp
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -209,6 +210,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8230798393716812394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4267480049651389191}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7b9f21ef71443040abfa04acdc26cad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4714525749130080628
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +369,7 @@ GameObject:
   - component: {fileID: 6245071968314622760}
   - component: {fileID: 3501422873525877286}
   - component: {fileID: 6438677312472818470}
+  - component: {fileID: 3686887368445332412}
   m_Layer: 5
   m_Name: PanelGameOver
   m_TagString: Untagged
@@ -383,8 +397,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61.534668}
-  m_SizeDelta: {x: 852.4994, y: 608.493}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 850, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3501422873525877286
 CanvasRenderer:
@@ -407,14 +421,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300054, guid: 1eaee135ce037439d925cee5e41ce026, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -423,7 +437,20 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
+--- !u!114 &3686887368445332412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5498341133918056776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8540f99dda56d504f8b7434414f846ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panelManager: {fileID: 0}
 --- !u!1 &5865927976351893446
 GameObject:
   m_ObjectHideFlags: 0
@@ -436,6 +463,7 @@ GameObject:
   - component: {fileID: 6169858581645411826}
   - component: {fileID: 4439281386845307973}
   - component: {fileID: 13896543440960116}
+  - component: {fileID: 5675725608379457602}
   m_Layer: 5
   m_Name: BtnSetting
   m_TagString: Untagged
@@ -500,7 +528,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!114 &13896543440960116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,8 +573,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 5675725608379457602}
+        m_TargetAssemblyTypeName: BtnSetting, Assembly-CSharp
         m_MethodName: Setting
         m_Mode: 1
         m_Arguments:
@@ -557,6 +585,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &5675725608379457602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5865927976351893446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2aac93522becc84db85ddc8046e27dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6336630429152187595
 GameObject:
   m_ObjectHideFlags: 0
@@ -977,6 +1017,7 @@ GameObject:
   - component: {fileID: 5436304522466722538}
   - component: {fileID: 2444511616409371804}
   - component: {fileID: 6287883195281750435}
+  - component: {fileID: 8682413821718027024}
   m_Layer: 5
   m_Name: BtnQuit
   m_TagString: Untagged
@@ -1041,7 +1082,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 2
 --- !u!114 &6287883195281750435
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1086,8 +1127,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: Assets._Data._Scripts.UI.Button.BtnGame, Assembly-CSharp
+      - m_Target: {fileID: 8682413821718027024}
+        m_TargetAssemblyTypeName: BtnQuit, Assembly-CSharp
         m_MethodName: Quit
         m_Mode: 1
         m_Arguments:
@@ -1098,3 +1139,15 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8682413821718027024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9121519700861962564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2587cba2837c0f743b0378c360ef9233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

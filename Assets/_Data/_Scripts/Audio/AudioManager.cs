@@ -29,6 +29,9 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.clip = AudioAssets.instance.BackGroundSound();
         musicSource.Play();
+        ChangeVolumeMusic(PlayerPrefs.GetFloat("musicVolume", 1));
+        ChangeVolumeSFX(PlayerPrefs.GetFloat("SFXVolume", 1));
+
     }
 
     public void PlaySFX(AudioClip audioClip)
