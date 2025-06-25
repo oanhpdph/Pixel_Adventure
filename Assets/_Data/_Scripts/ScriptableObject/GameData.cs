@@ -5,5 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "GameData", menuName = "Scriptable Objects/GameData", order = 1)]
 public class GameData : ScriptableObject
 {
-    public List<SaveData> saveData;
+    public List<LevelData> saveData;
+    public int totalStar;
 }

@@ -68,6 +68,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
     <Compile Include="Assets\_Data\_Scripts\Item\Fruits\FruitsController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
+    <Compile Include="Assets\_Data\_Scripts\Save\LevelData.cs" />
     <Compile Include="Assets\_Data\_Scripts\Audio\AudioManager.cs" />
     <Compile Include="Assets\_Data\_Scripts\Traps\SpikedBall\TrapSpikedBall.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexColorCycler.cs" />
     <Compile Include="Assets\_Data\_Scripts\Level\LevelController.cs" />
+    <Compile Include="Assets\_Data\_Scripts\Common\LoadAssets.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\_Data\_Scripts\Player\SpawnCharacter.cs" />
     <Compile Include="Assets\_Data\_Scripts\Enemy\EnemyHealth.cs" />
@@ -88,6 +90,7 @@
     <Compile Include="Assets\_Data\_Scripts\UI\Button\BtnSelectCharacter.cs" />
     <Compile Include="Assets\_Data\_Scripts\Enemy\Turtle\EnemyTurtle.cs" />
     <Compile Include="Assets\_Data\_Scripts\Common\MovingCircle.cs" />
+    <Compile Include="Assets\_Data\_Scripts\Save\SaveController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
     <Compile Include="Assets\_Data\_Scripts\Player\PlayerWallCheck.cs" />
     <Compile Include="Assets\_Data\_Scripts\Enemy\Plant\EnemyPlant.cs" />
@@ -128,7 +131,6 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextMeshSpawner.cs" />
     <Compile Include="Assets\_Data\_Scripts\Common\RotationTrapMove.cs" />
     <Compile Include="Assets\_Data\_Scripts\UI\Button\BtnMainMenu.cs" />
-    <Compile Include="Assets\_Data\_Scripts\Save\SaveData.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\_Data\_Scripts\Player\PlayerGroundCheck.cs" />
     <Compile Include="Assets\_Data\_Scripts\UI\Button\BtnNextLevel.cs" />
@@ -150,6 +152,7 @@
     <Compile Include="Assets\_Data\_Scripts\ScriptableObject\CharacterSO.cs" />
     <Compile Include="Assets\_Data\_Scripts\UI\Button\BtnQuit.cs" />
     <Compile Include="Assets\_Data\_Scripts\Point\StartPoint\StartPoint.cs" />
+    <Compile Include="Assets\_Data\_Scripts\Save\SaveDataWrapper.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ShaderPropAnimator.cs" />
     <Compile Include="Assets\_Data\_Scripts\Manager\GameStateManager.cs" />
     <Compile Include="Assets\_Data\_Scripts\Enemy\Bee\EnemyBee.cs" />
@@ -164,10 +167,9 @@
     <Compile Include="Assets\_Data\_Scripts\Common\Health.cs" />
     <Compile Include="Assets\_Data\_Scripts\Enemy\BlueBird\BlueBirdEnemy.cs" />
     <Compile Include="Assets\_Data\_Scripts\Item\ItemWorld.cs" />
-    <Compile Include="Assets\_Data\_Scripts\Save\SaveGame.cs" />
     <Compile Include="Assets\_Data\_Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\_Data\_Scripts\UI\Panel\ClosePanel.cs" />
-    <Compile Include="Assets\_Data\_Scripts\Save\ResetData.cs" />
+    <Compile Include="Assets\_Data\_Scripts\Interface\ILoadAsset.cs" />
     <Compile Include="Assets\_Data\_Scripts\Audio\AudioSetting.cs" />
     <Compile Include="Assets\_Data\_Scripts\Traps\Platforms\Platforms.cs" />
     <Compile Include="Assets\_Data\_Scripts\Camera\CameraManager.cs" />
@@ -176,10 +178,10 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\_Data\_Scripts\Traps\Platforms\PlatformFalling.cs" />
     <Compile Include="Assets\_Data\_Scripts\Common\MovingPointToPoint.cs" />
+    <Compile Include="Assets\_Data\_Scripts\Interface\ISaveGame.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
-    <None Include="Assets\AddressableAssetsData\link.xml" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
     <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />

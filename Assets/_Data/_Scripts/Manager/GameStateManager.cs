@@ -24,7 +24,6 @@ public class GameStateManager : MonoBehaviour
     }
     public void ChangeState(GameState gameState)
     {
-        Debug.Log("change state " + GameManager.Instance.CurrentState);
         switch (GameManager.Instance.CurrentState)
         {
             case GameState.Pause:
@@ -94,7 +93,6 @@ public class GameStateManager : MonoBehaviour
             item.SetActive(false);
         }
 
-        Debug.Log(Time.timeScale);
     }
     private IEnumerator ShowSettingPanel()
     {

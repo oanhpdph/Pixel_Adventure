@@ -1,16 +1,16 @@
 ﻿namespace Assets._Data._Scripts.Level
 {
     [System.Serializable]
-    public class SaveData
+    public class LevelData
     {
         public int level;
         public int star;
         public bool unlock;
 
-        public SaveData()
+        public LevelData()
         {
         }
-        public SaveData(int level, int star, bool unlock)
+        public LevelData(int level, int star, bool unlock)
         {
             this.level = level;
             this.star = star;

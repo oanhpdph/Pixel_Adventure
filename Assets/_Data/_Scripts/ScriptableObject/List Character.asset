@@ -13,16 +13,25 @@ MonoBehaviour:
   m_Name: List Character
   m_EditorClassIdentifier: 
   listCharacter:
-  - avt: {fileID: 8113034764418741531, guid: 47955e39d2aeeac4da79165371a7bca3, type: 3}
-    character: {fileID: 7035718904930518128, guid: 6611d62b02ebd48468d7278818e7431c, type: 3}
-    name: Mask Dude
-  - avt: {fileID: 8113034764418741531, guid: bcc7887c23b1feb478cdf72bdd5d9870, type: 3}
-    character: {fileID: 7035718904930518128, guid: 355d2227eb1fc614aaa603c376cd1e7a, type: 3}
-    name: Ninja Frog
-  - avt: {fileID: 8113034764418741531, guid: cab3168a370fcbb4d8dcd5effab5cdcc, type: 3}
-    character: {fileID: 7035718904930518128, guid: 3656be0ed28e6fa4497f96557b3ac501, type: 3}
-    name: Pink Man
-  - avt: {fileID: 8113034764418741531, guid: 8dea4a62112fe8f419dff109dde96bcc, type: 3}
-    character: {fileID: 7035718904930518128, guid: cfbda50b3ff6a624ebf67bf0009b883c, type: 3}
-    name: Virtual Guy
-  characterSelect: 0
+    infoCharacters:
+    - nameAvt: MaskDudeAvt
+      namePrefab: MaskDude
+      name: Mask Dude
+      isUnlock: 1
+      price: 0
+    - nameAvt: NinjaFrogAvt
+      namePrefab: NinjaFrog
+      name: NinjaFrog
+      isUnlock: 0
+      price: 3
+    - nameAvt: PinkManAvt
+      namePrefab: PinkMan
+      name: PinkMan
+      isUnlock: 0
+      price: 6
+    - nameAvt: VirtualGuyAvt
+      namePrefab: VirtualGuy
+      name: VirtualGuy
+      isUnlock: 0
+      price: 9
+    index: 0

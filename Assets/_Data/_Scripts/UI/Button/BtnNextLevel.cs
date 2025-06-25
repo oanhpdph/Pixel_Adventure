@@ -5,7 +5,7 @@ public class BtnNextLevel : MonoBehaviour
 {
     private void OnEnable()
     {
-        if (LevelController.instance.currentLevel + 1 > LevelController.instance.saveData.Count)
+        if (LevelController.Instance.currentLevel + 1 > LevelController.Instance.saveData.Count)
         {
             gameObject.SetActive(false);
         }
@@ -14,8 +14,8 @@ public class BtnNextLevel : MonoBehaviour
     {
         Time.timeScale = 1.0f;
         GameManager.Instance.CurrentState = GameState.Play;
-        LevelController.instance.currentLevel++;
-        string level = "Level " + (LevelController.instance.currentLevel);
+        LevelController.Instance.currentLevel++;
+        string level = "Level " + (LevelController.Instance.currentLevel);
         SceneController.Instance.LoadScene(level);
     }
 }

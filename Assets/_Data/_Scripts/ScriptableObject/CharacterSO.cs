@@ -1,15 +1,22 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 [CreateAssetMenu(menuName = "Scriptable Objects/List Character", fileName = "List Character")]
 public class CharacterSO : ScriptableObject
 {
-    public List<InfoCharacter> listCharacter;
+    public CharacterWrapper listCharacter;
 }
 [System.Serializable]
 public class InfoCharacter
 {
-    public GameObject avt;
-    public GameObject character;
+    public string nameAvt;
+    public string namePrefab;
     public string name;
+    public bool isUnlock;
+    public int price;
+}
+[System.Serializable]
+public class CharacterWrapper
+{
+    public InfoCharacter[] infoCharacters;
+    public int index;
 }

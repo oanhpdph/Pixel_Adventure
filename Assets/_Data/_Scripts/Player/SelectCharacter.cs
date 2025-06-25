@@ -1,40 +1,69 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
 
 public class SelectCharacter : MonoBehaviour
 {
+    [SerializeField] private GameObject buttonUnlock;
+    [SerializeField] private GameObject buttonOk;
+
     public CharacterSO characterSO;
-    public GameObject nameCharacterPrefab;
     private GameObject[] showCharacter = new GameObject[3];
     private List<GameObject> listAvt;
     private Vector3 position = new(500, 0, 0);
     private Vector3 scale;
 
     private int indexCurrent;
-    private void Start()
-    {
-        indexCurrent = PlayerPrefs.GetInt("characterSelect", 0);
 
-        SpawnAllCharacter();
-        SpawnCharacter();
+    private ISaveGame saveGame;
+    private ILoadAsset loadAsset;
+
+    private CharacterWrapper characterWrapper;
+
+    async void Start()
+    {
+        this.gameObject.transform.parent.gameObject.SetActive(false);
+        saveGame = new SaveController();
+        loadAsset = new LoadAssets();
+        characterWrapper = saveGame.Load<CharacterWrapper>("CharacterData.json") ?? characterSO.listCharacter;
+        indexCurrent = characterWrapper.index;
+
+        await SpawnAllCharacter();
+        if (listAvt.Count > 0)
+        {
+            SpawnCharacter();
+        }
+
+        GameManager.Instance.character = await loadAsset.LoadAsset<GameObject>(characterWrapper.infoCharacters[indexCurrent].namePrefab);
+
     }
 
-    private void SpawnAllCharacter()
+    private async Task SpawnAllCharacter()
     {
         listAvt = new List<GameObject>();
-        foreach (InfoCharacter infoCharacter in characterSO.listCharacter)
+
+        List<Task<GameObject>> loadTask = new();
+        foreach (var info in characterWrapper.infoCharacters)
         {
-            GameObject avtCharacter = Instantiate(infoCharacter.avt, gameObject.transform);
+            loadTask.Add(loadAsset.LoadAsset<GameObject>(info.nameAvt));
+        }
+        GameObject[] loadAvts = await Task.WhenAll(loadTask);
+
+
+        foreach (GameObject avt in loadAvts)
+        {
+            GameObject avtCharacter = Instantiate(avt, gameObject.transform);
             listAvt.Add(avtCharacter);
             avtCharacter.SetActive(false);
-            scale = infoCharacter.avt.transform.localScale;
-            GameObject name = Instantiate(nameCharacterPrefab, avtCharacter.transform);
-            name.GetComponent<TextMeshProUGUI>().text = infoCharacter.name;
+            scale = avt.transform.localScale;
         }
+
     }
+
     private void SpawnCharacter()
     {
+
         foreach (GameObject character in listAvt)
         {
             character.SetActive(false);
@@ -43,14 +72,27 @@ public class SelectCharacter : MonoBehaviour
         {
             GameObject avtCharacter;
 
-            if (indexCurrent - 1 + i >= 0 && indexCurrent - 1 + i < characterSO.listCharacter.Count)
+            if (indexCurrent + i >= 1 && indexCurrent + i < characterWrapper.infoCharacters.Length + 1)
             {
+                //Debug.Log(listAvt.Count);
                 avtCharacter = listAvt[indexCurrent - 1 + i];
 
                 avtCharacter.SetActive(true);
                 avtCharacter.GetComponent<RectTransform>().anchoredPosition = position * (i - 1);
                 avtCharacter.GetComponent<RectTransform>().localScale = scale;
-
+                if (characterWrapper.infoCharacters[indexCurrent - 1 + i].price <= LevelController.Instance.totalStar)// check character can unlock
+                {
+                    characterWrapper.infoCharacters[indexCurrent - 1 + i].isUnlock = true;
+                    saveGame.Save<CharacterWrapper>(characterWrapper, "CharacterData.json");
+                }
+                if (!characterWrapper.infoCharacters[indexCurrent - 1 + i].isUnlock)
+                {
+                    avtCharacter.GetComponent<SpriteRenderer>().color = new Color(0.5f, 0.5f, 0.5f, 1f);
+                }
+                else
+                {
+                    avtCharacter.GetComponent<SpriteRenderer>().color = new Color(1, 1, 1, 1f);
+                }
                 showCharacter[i] = avtCharacter;
             }
             else
@@ -58,11 +100,26 @@ public class SelectCharacter : MonoBehaviour
                 showCharacter[i] = null;
             }
         }
+        ShowButton();
         showCharacter[1].GetComponent<RectTransform>().localScale = showCharacter[1].GetComponent<RectTransform>().localScale * 1.5f;
+    }
+    public void ShowButton()
+    {
+        if (!characterWrapper.infoCharacters[indexCurrent].isUnlock)
+        {
+            buttonUnlock.SetActive(true);
+            buttonUnlock.transform.Find("Price").GetComponent<TextMeshProUGUI>().text = characterWrapper.infoCharacters[indexCurrent].price.ToString();
+            buttonOk.SetActive(false);
+        }
+        else
+        {
+            buttonUnlock.SetActive(false);
+            buttonOk.SetActive(true);
+        }
     }
     public void NextCharacter()
     {
-        if (indexCurrent == characterSO.listCharacter.Count - 1)
+        if (indexCurrent == characterWrapper.infoCharacters.Length - 1)
         {
             return;
         }
@@ -78,11 +135,13 @@ public class SelectCharacter : MonoBehaviour
         indexCurrent -= 1;
         SpawnCharacter();
     }
-    public void Select()
+    public async void Select()
     {
-        PlayerPrefs.SetInt("characterSelect", indexCurrent);
-        PlayerPrefs.Save();
-        Debug.Log(PlayerPrefs.GetInt("characterSelect", 0));
+        characterWrapper.index = indexCurrent;
+        saveGame.Save<CharacterWrapper>(characterWrapper, "CharacterData.json");
         transform.parent.gameObject.SetActive(false);
+        GameManager.Instance.character = await loadAsset.LoadAsset<GameObject>(characterWrapper.infoCharacters[indexCurrent].namePrefab);
     }
+
+    public void UnlockCharacter() { }
 }

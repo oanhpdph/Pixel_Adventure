@@ -13,7 +13,7 @@ public class TrapSpikeHead : MonoBehaviour
     [SerializeField] protected float speed = 5f;
     private int currentIndex = 0;
     protected int speedMultiplier = 1;
-
+    private float speedReal = 0;
     protected Vector3[] direction = new Vector3[4];
     protected Vector2 directionTarget;
 
@@ -21,6 +21,13 @@ public class TrapSpikeHead : MonoBehaviour
     private void Start()
     {
         spikeHeadAnimator = GetComponent<Animator>();
+        StartCoroutine(DelayInit());
+    }
+    private IEnumerator DelayInit()
+    {
+        speedReal = 0f;
+        yield return new WaitForSeconds(0.5f);
+        speedReal = speed;
         CalculateDirection();
         DirectionTarget();
     }
@@ -31,7 +38,7 @@ public class TrapSpikeHead : MonoBehaviour
 
     public void Moving()
     {
-        transform.Translate(Time.deltaTime * speed * speedMultiplier * directionTarget);
+        transform.Translate(Time.deltaTime * speedReal * speedMultiplier * directionTarget);
     }
 
     protected void EffectCollider()

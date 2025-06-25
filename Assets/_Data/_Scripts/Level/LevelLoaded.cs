@@ -8,7 +8,7 @@ public class LevelLoaded : MonoBehaviour
 {
     [SerializeField] private GameObject _levelPrefab;
 
-    private List<SaveData> saveData;
+    private List<LevelData> saveData;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +20,9 @@ public class LevelLoaded : MonoBehaviour
 
     private void InstantiateLevel()
     {
-        saveData = LevelController.instance.saveData;
+        saveData = LevelController.Instance.saveData;
 
-        foreach (SaveData item in saveData)
+        foreach (LevelData item in saveData)
         {
             GameObject level = Instantiate(_levelPrefab
                 , transform.position
@@ -40,7 +40,7 @@ public class LevelLoaded : MonoBehaviour
             {
                 levelStar.Star(item.star);
 
-                level.GetComponent<Button>().onClick.AddListener(() => LevelController.instance.SelectLevel(item.level));
+                level.GetComponent<Button>().onClick.AddListener(() => LevelController.Instance.SelectLevel(item.level));
             }
             else
             {

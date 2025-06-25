@@ -46,7 +46,7 @@ public class Endpoint : MonoBehaviour
     }
     public void Init()
     {
-        levelController = LevelController.instance;
+        levelController = LevelController.Instance;
         totalFruits = FruitsController.Instance.GetTotalFruitsPerType();
     }
     private IEnumerator FinishGame()
@@ -100,7 +100,7 @@ public class Endpoint : MonoBehaviour
 
     private void UnlockNextLevel()
     {
-        SaveData nextLevel = levelController.GetOneLevel(levelController.currentLevel + 1);
+        LevelData nextLevel = levelController.GetOneLevel(levelController.currentLevel + 1);
         if (nextLevel != null)
         {
             if (nextLevel.unlock)
@@ -108,7 +108,7 @@ public class Endpoint : MonoBehaviour
                 return;
             }
             nextLevel.unlock = true;
-            levelController.UpdateSaveDataSO(nextLevel);
+            levelController.UpdateSaveData(nextLevel);
         }
         else
         {
@@ -118,11 +118,11 @@ public class Endpoint : MonoBehaviour
 
     private void UpdateLevel()
     {
-        SaveData currentLevel = levelController.GetOneLevel(levelController.currentLevel);
+        LevelData currentLevel = levelController.GetOneLevel(levelController.currentLevel);
         if (currentLevel.star < calculatorStar)
         {
             currentLevel.star = calculatorStar;
-            levelController.UpdateSaveDataSO(currentLevel);
+            levelController.UpdateSaveData(currentLevel);
         }
     }
 }

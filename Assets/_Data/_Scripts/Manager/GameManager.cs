@@ -20,13 +20,15 @@ public class GameManager : MonoBehaviour
 
     private GameState curState;
     public Stack<GameState> stackGameState = new();
-    private void Start()
+    public GameObject character;
+    private void Awake()
     {
         if (instance == null)
         {
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
+
     }
 
     public GameState CurrentState

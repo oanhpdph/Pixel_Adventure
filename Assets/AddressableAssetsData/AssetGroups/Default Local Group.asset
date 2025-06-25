@@ -16,7 +16,47 @@ MonoBehaviour:
   m_Data:
     m_SerializedData: []
   m_GUID: 095c3020a4ff3574daaba5f5501ff842
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 47955e39d2aeeac4da79165371a7bca3
+    m_Address: MaskDudeAvt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6611d62b02ebd48468d7278818e7431c
+    m_Address: MaskDude
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcc7887c23b1feb478cdf72bdd5d9870
+    m_Address: NinjaFrogAvt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 355d2227eb1fc614aaa603c376cd1e7a
+    m_Address: NinjaFrog
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cab3168a370fcbb4d8dcd5effab5cdcc
+    m_Address: PinkManAvt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3656be0ed28e6fa4497f96557b3ac501
+    m_Address: PinkMan
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8dea4a62112fe8f419dff109dde96bcc
+    m_Address: VirtualGuyAvt
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cfbda50b3ff6a624ebf67bf0009b883c
+    m_Address: VirtualGuy
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2510a45182d27074580ab09e200150b4, type: 2}
   m_SchemaSet:

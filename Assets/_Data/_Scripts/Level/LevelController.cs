@@ -1,28 +1,39 @@
 using Assets._Data._Scripts.Level;
-using Assets._Data._Scripts.Save;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
-    public static LevelController instance { get; private set; }
-    [SerializeField] private GameData gameData;
-
-
+    public static LevelController Instance { get; private set; }
     public int currentLevel;
-    public List<SaveData> saveData;
-
+    public List<LevelData> saveData;
+    public int totalStar = 0;
+    public GameData gameData;
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        SaveGame saveGame = new();
-        gameData.saveData = saveGame.Load() == null ? gameData.saveData : gameData.saveData = saveGame.Load();
-        saveData = gameData.saveData;
+        else
+        {
+            Destroy(gameObject);
+        }
+        ISaveGame save = new SaveController();
+        SaveDataWrapper saveDataWrapper = save.Load<SaveDataWrapper>("DataLevel.json");
+        if (saveDataWrapper != null)
+        {
+            saveData = saveDataWrapper.levelData.ToList();
+        }
+        else
+        {
+            saveData = gameData.saveData;
+        }
+        totalStar = saveData.Sum(data => data.star);
+
     }
 
     public void SelectLevel(int level)
@@ -32,31 +43,33 @@ public class LevelController : MonoBehaviour
         SceneManager.LoadScene(levelSelect);
     }
 
-    public void UpdateSaveDataSO(SaveData saveData)
+    public void UpdateSaveData(LevelData data)
     {
-        foreach (SaveData item in gameData.saveData)
+        foreach (LevelData item in saveData)
         {
-            if (item.level == saveData.level)
+            if (item.level == data.level)
             {
-                item.star = saveData.star;
-                item.unlock = saveData.unlock;
+                item.star = data.star;
+                item.unlock = data.unlock;
             }
         }
+        totalStar = saveData.Sum(data => data.star);
         SaveUpdate();
     }
     public void SaveUpdate()
     {
-        SaveGame saveGame = new();
-        saveGame.Save(gameData.saveData);
+        SaveDataWrapper saveDataWrapper = new() { levelData = saveData.ToArray() };
+        ISaveGame saveGame = new SaveController();
+        saveGame.Save<SaveDataWrapper>(saveDataWrapper, "DataLevel.json");
     }
 
-    public SaveData GetOneLevel(int level)
+    public LevelData GetOneLevel(int level)
     {
-        if (level > gameData.saveData.Count)
+        if (level > saveData.Count)
         {
             return null;
         }
-        foreach (SaveData item in gameData.saveData)
+        foreach (LevelData item in saveData)
         {
             if (item.level == level)
             {

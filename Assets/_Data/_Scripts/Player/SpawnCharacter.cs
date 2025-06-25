@@ -3,8 +3,6 @@
 
 public class SpawnCharacter : MonoBehaviour
 {
-    public CharacterSO characterSO;
-
     private void Awake()
     {
         Spawn();
@@ -12,6 +10,6 @@ public class SpawnCharacter : MonoBehaviour
 
     private void Spawn()
     {
-        GameObject character = Instantiate(characterSO.listCharacter[PlayerPrefs.GetInt("characterSelect", 0)].character, transform);
+        Instantiate(GameManager.Instance.character, transform);
     }
 }
