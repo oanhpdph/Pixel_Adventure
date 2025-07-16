@@ -35,9 +35,11 @@ public class PlatformFalling : Platforms
     }
     public override void OnTriggerEnter2D(Collider2D collision)
     {
-        string collisionName = collision.gameObject.name;
-        if (collisionName.CompareTo("player") == 0)
+        string collisionName = collision.gameObject.tag;
+        if (collisionName.CompareTo("Player") == 0)
         {
+            Debug.Log("trigger");
+
             collision.transform.SetParent(transform);
             StartCoroutine(Falling());
             StartCoroutine(ResetPosition());

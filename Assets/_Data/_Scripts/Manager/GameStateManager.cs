@@ -92,7 +92,6 @@ public class GameStateManager : MonoBehaviour
         {
             item.SetActive(false);
         }
-
     }
     private IEnumerator ShowSettingPanel()
     {
@@ -132,6 +131,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         Time.timeScale = 0;
+        GameManager.Instance.stackGameState.Clear();
         EventSystem.current.SetSelectedGameObject(null);
     }
 

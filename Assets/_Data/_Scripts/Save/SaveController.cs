@@ -10,7 +10,6 @@ public class SaveController : ISaveGame
         if (File.Exists(path))
         {
             string jsonData = System.IO.File.ReadAllText(path);
-            Debug.Log(jsonData);
             return JsonUtility.FromJson<T>(jsonData);
         }
         else
@@ -22,7 +21,7 @@ public class SaveController : ISaveGame
 
     public void Save<T>(object data, string fileName)
     {
-        string jsonData = JsonUtility.ToJson(data);
+        string jsonData = JsonUtility.ToJson(data, true);
         string path = Path.Combine(Application.persistentDataPath, fileName);
         System.IO.File.WriteAllText(path, jsonData);
     }
