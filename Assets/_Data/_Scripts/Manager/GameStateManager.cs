@@ -131,7 +131,7 @@ public class GameStateManager : MonoBehaviour
         }
 
         Time.timeScale = 0;
-        GameManager.Instance.stackGameState.Clear();
+
         EventSystem.current.SetSelectedGameObject(null);
     }
 

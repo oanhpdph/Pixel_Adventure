@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\manager\\gamestatemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|d:\\pixel adventure 1\\assets\\_data\\_scripts\\ui\\button\\btnrestartgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\ui\\button\\btnrestartgame.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|D:\\Pixel Adventure 1\\assets\\_data\\_scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{EE98414C-7718-4B4D-1C44-160E200C51BB}|Assembly-CSharp.csproj|solutionrelative:assets\\_data\\_scripts\\manager\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,7 +42,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "BtnRestartGame.cs",
+              "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\UI\\Button\\BtnRestartGame.cs",
+              "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\UI\\Button\\BtnRestartGame.cs",
+              "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\UI\\Button\\BtnRestartGame.cs",
+              "RelativeToolTip": "Assets\\_Data\\_Scripts\\UI\\Button\\BtnRestartGame.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-17T04:19:53.976Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SaveController.cs",
               "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Save\\SaveController.cs",
               "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Save\\SaveController.cs",
@@ -50,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PlatformFalling.cs",
               "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Traps\\Platforms\\PlatformFalling.cs",
               "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Traps\\Platforms\\PlatformFalling.cs",
@@ -62,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SelectCharacter.cs",
               "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Player\\SelectCharacter.cs",
               "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Player\\SelectCharacter.cs",
@@ -74,7 +91,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "GameManager.cs",
               "DocumentMoniker": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Manager\\GameManager.cs",
               "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Manager\\GameManager.cs",
@@ -92,7 +109,7 @@
               "RelativeDocumentMoniker": "Assets\\_Data\\_Scripts\\Manager\\GameStateManager.cs",
               "ToolTip": "D:\\Pixel Adventure 1\\Assets\\_Data\\_Scripts\\Manager\\GameStateManager.cs",
               "RelativeToolTip": "Assets\\_Data\\_Scripts\\Manager\\GameStateManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAgwF4AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAswHIAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-30T13:48:10.066Z",
               "EditorCaption": ""

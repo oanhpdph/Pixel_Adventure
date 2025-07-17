@@ -7,5 +7,6 @@ public class BtnRestartGame : MonoBehaviour
     {
         GameManager.Instance.CurrentState = GameState.Play;
         UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        GameManager.Instance.stackGameState.Clear();
     }
 }
